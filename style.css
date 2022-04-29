@@ -1,0 +1,82 @@
+:root {
+--pri-color: #333;
+--sec-color: #a9a8a8;
+--text-color: #000000;
+--text-color2: #fff;
+--accent-color: #022239;
+--sec-accent-color: #fefefe;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    transition: 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+/* main section */
+.main {
+    height: 80vh;
+}
+
+.main-text {
+    width: 50%;
+    padding: 30px;
+}
+
+
+/* switch styles */
+.switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    position: relative;
+}
+
+.flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--sec-accent-color);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.3s;
+    box-shadow: 
+        inset 4px 4px 4px rgb(255 255 255),
+        inset -14px -4px 4px rgba(162, 162, 166, 0.9);
+}
+
+/* moon style css */
+.moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 230, 4);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+/* dark mode style */
+.dark {
+    background-color: #3a4349;
+}
+
+.dark .flicker {
+    transform: translateX(40px);
+}
+
+.dark > * {
+    color: var(--text-color2);
+}
