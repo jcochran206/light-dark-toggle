@@ -10,6 +10,10 @@ font-family: 'Poppins', sans-serif; */
 --text-color2: #fff;
 --accent-color: #022239;
 --sec-accent-color: #fefefe;
+--html-base-color: #0577fa;
+--css-base-color:#f5b657;
+--js-base-color:#fff455;
+--react-base-color: #b88df8;
 }
 
 
@@ -58,6 +62,8 @@ header {
 /* main section */
 .main {
     height: 80vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .main-text {
@@ -68,6 +74,109 @@ header {
 .text-alt {
     color: var(--pri-color)
 }
+
+.hero-img {
+    position: relative;
+    width: 50%;
+    height: 350px;
+}
+
+.cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+}
+
+.cube::before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+
+}
+
+.cube::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+}
+
+#html {
+    left: 100px;
+    bottom: 100px;
+    background-image: url('/img/html-square.png');
+    background-size: cover;
+    background-color: var(--html-base-color);
+    box-shadow: -60px 60px 20px #a9a8a8;
+}
+
+#html::before{
+    background-color: #032e4c;
+}
+
+#html::after{
+    background-color: #5cb9fa;
+}
+
+#css {
+    left: 250px;
+    bottom: 240px;
+    background-image: url('/img/css-square.png');
+    background-size: cover;
+    background-color: var(--css-base-color);
+    box-shadow: -60px 60px 20px #a9a8a8;
+}
+
+#css::before{
+    background-color: #032e4c;
+}
+
+#css::after{
+    background-color: #5cb9fa;
+}
+
+#js {
+    left: 460px;
+    bottom: 100px;
+    background-image: url('/img/javascript-square.png');
+    background-size: cover;
+    background-color: var(--js-base-color);
+    box-shadow: -60px 60px 20px #a9a8a8;
+}
+
+#js::before{
+    background-color: #032e4c;
+}
+
+#js::after{
+    background-color: #5cb9fa;
+}
+
+#react {
+    left: 280px;
+    bottom: 100px;
+    background-image: url('/img/react-square.png');
+    background-size: cover;
+    background-color: var(--react-base-color);
+    box-shadow: -60px 60px 20px #a9a8a8;
+}
+
+#react::before{
+    background-color: #032e4c;
+}
+
+#react::after{
+    background-color: #5cb9fa;
+}
+
 
 
 /* switch styles */
