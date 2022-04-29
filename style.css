@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=Fira+Sans:wght@500&family=Poppins:wght@300;400;700&display=swap');
+/* font-family: 'Chicle', cursive;
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
 :root {
---pri-color: #333;
+--pri-color: #37bba5;
 --sec-color: #a9a8a8;
 --text-color: #000000;
 --text-color2: #fff;
@@ -7,13 +12,40 @@
 --sec-accent-color: #fefefe;
 }
 
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+h1 {
+    font-size: 70px;
+    line-height: 60px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+}
+
+a {
+   color:var(--pri-color);
+   font-size: 20px;
+   text-decoration: none;
+   font-weight: 300; 
+}
+
 body {
+    background-color: #edebeb;
     transition: 0.5s;
 }
 
@@ -29,8 +61,12 @@ header {
 }
 
 .main-text {
-    width: 50%;
     padding: 30px;
+    font-family: 'Chicle', cursive;
+}
+
+.text-alt {
+    color: var(--pri-color)
 }
 
 
@@ -77,6 +113,77 @@ header {
     transform: translateX(40px);
 }
 
+.dark .switch {
+    background-color: #a9a8a8
+}
+
 .dark > * {
     color: var(--text-color2);
+}
+
+.dark a {
+    color:#fdf079
+}
+
+.dark footer {
+    background-color: var(--pri-color);
+}
+
+/* square styles */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.square {
+    width: 96%;
+    height: 350px;
+    text-align: center;
+    margin: 1%;
+    background-color: #fff;
+    color: #3a4349;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+#desktop {
+    background-image: url('/img/desktop.jpg');
+    background-size: cover;
+}
+
+#desktop2 {
+    background-image: url('/img/desktop2.jpg');
+    background-size: cover;
+}
+
+#hardware {
+    background-image: url('/img/hardware.jpg');
+    background-size: cover;
+}
+
+#pi {
+    background-image: url('/img/raspberrypi.jpg');
+    background-size: cover;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 100px 30px;
+    background-color: var(--accent-color);
+    color: var(--text-color2);
+}
+
+/* media queries */
+@media only screen and (min-width: 970px){
+    .main-text {
+        width: 50%;
+    }
+
+   .square {
+       width: 48%;
+       height: 600px;
+       margin: 1%;
+   } 
 }
